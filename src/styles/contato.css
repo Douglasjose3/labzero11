@@ -1,0 +1,142 @@
+/* CONTATO */
+/* --- SEÇÃO DE CONTATO (TEMA DARK) --- */
+.contact-section {
+  background-color: var(--color-secundary); /* Fundo Azul Escuro */
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* Destaque Neon no Texto */
+.text-neon {
+  color: var(--color-primary);
+}
+
+/* Container de cada item (Endereço, Tel, Email) */
+.contact-item {
+  display: flex;
+  align-items: flex-start; /* Alinha ícone e texto no topo */
+  margin-bottom: 2rem;
+}
+
+/* O Ícone Circular */
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(199, 255, 0, 0.1); /* Neon transparente */
+  color: var(--color-primary); /* Ícone Neon */
+  border-radius: 12px;
+  font-size: 1.2rem;
+  margin-right: 1.2rem;
+  flex-shrink: 0; /* Impede que o ícone amasse no celular */
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+  background-color: var(--color-primary);
+  color: var(--color-secundary);
+  transform: scale(1.1);
+}
+
+/* Textos do Contato */
+.contact-text h5 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.contact-text p,
+.contact-link {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+/* Link fica Neon ao passar o mouse */
+.contact-link:hover {
+  color: var(--color-primary);
+}
+
+/* Botões de Redes Sociais */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-secundary);
+  transform: translateY(-5px);
+}
+
+/* --- ESTILO DO MAPA --- */
+.map-container {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border: 4px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+  height: 100%;
+  min-height: 400px; /* Garante altura no mobile */
+}
+
+/* Filtro opcional para deixar o mapa mais "dark" e combinar com o site 
+   (Se preferir o mapa colorido normal, apague a linha 'filter' abaixo) */
+/* Isso garante que o mapa preencha a caixa arredondada */
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Container que dá a forma arredondada */
+.map-container {
+  width: 100%;
+  height: 100%;
+  min-height: 450px; /* Aumentei um pouco para garantir boa visão no desktop */
+  border-radius: 20px;
+  overflow: hidden; /* Corta as pontas quadradas do mapa */
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  position: relative; /* Garante que o filho absoluto obedeça a este pai */
+}
+
+/* O mapa em si */
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  display: block; /* O SEGREDO: Remove o comportamento de texto */
+  border: 0;
+}
+
+/* FONT AWESOME */
+/* Força o peso Bold para ícones Solid (fas/fa-solid) */
+.fa,
+.fas,
+.fa-solid {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  font-size: 1.8rem;
+}
+
+/* Garante a fonte correta para ícones de Marcas (fab/fa-brands) */
+.fab,
+.fa-brands {
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 400 !important;
+  font-size: 1.8rem;
+}

@@ -1,0 +1,86 @@
+/* --- SEÇÃO SOBRE A EMPRESA --- */
+/* Reutilizando o fundo cinza se não estiver definido */
+.section-bg {
+  background-color: #f8f9fa;
+}
+
+/* Tipografia Específica */
+.letter-spacing-2 {
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.text-secundary {
+  color: var(--color-secundary); /* Azul Escuro */
+}
+
+.text-neon {
+  color: var(--color-primary) !important; /* Verde Neon */
+}
+
+/* Variação do Neon um pouco mais escura para leitura em fundo claro */
+.text-neon-dark {
+  color: #a4d100; /* Um verde um pouco mais fechado para ler no branco */
+  font-style: italic;
+}
+
+/* --- CARD DE ESTATÍSTICAS (O destaque visual) --- */
+.about-card-wrapper {
+  padding: 15px; /* Espaço para a borda decorativa aparecer */
+}
+
+/* O quadrado azul escuro */
+.about-stats-card {
+  background-color: var(--color-secundary);
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 25px 50px rgba(31, 45, 115, 0.25); /* Sombra elegante azulada */
+}
+
+/* O elemento decorativo (Borda deslocada) */
+.about-bg-decoration {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 95%;
+  height: 95%;
+  border: 3px solid var(--color-primary); /* Borda Neon */
+  border-radius: 25px;
+  z-index: 1;
+  transform: translate(15px, -15px); /* Desloca para cima e direita */
+  transition: transform 0.4s ease;
+  background: var(--color-primary);
+}
+
+/* Animação ao passar o mouse */
+.about-card-wrapper:hover .about-bg-decoration {
+  transform: translate(8px, -8px); /* A borda se aproxima do card */
+}
+
+/* Utilitários internos do card */
+.border-white-10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --- BOTÃO CUSTOMIZADO --- */
+.btn-custom {
+  background-color: var(--color-secundary);
+  color: #fff;
+  transition: all 0.3s ease;
+  border: 2px solid var(--color-secundary);
+}
+
+.btn-custom:hover {
+  background-color: transparent;
+  color: var(--color-secundary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(31, 45, 115, 0.15);
+}
+
+@media screen and (max-width: 566px) {
+  .about-bg-decoration {
+    top: 15px;
+    right: 15px;
+  }
+}

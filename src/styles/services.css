@@ -1,0 +1,94 @@
+/* SERVIÇOS */
+/* 1. Fundo da Seção e Tipografia */
+#servicos-tecnicos.section-bg {
+  background-color: #f8f9fa; /* Cinza gelo para contraste com os cards brancos */
+}
+
+#servicos-tecnicos h2 {
+  color: var(--color-secundary);
+  letter-spacing: -0.5px;
+}
+
+#servicos-tecnicos .lead {
+  color: #6c757d;
+}
+
+/* 2. O Card (Estrutura Unificada) */
+.tech-card {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  height: 100%;
+  position: relative; /* Para posicionamentos internos */
+
+  /* Borda sutil para definição */
+  border: 1px solid rgba(0, 0, 0, 0.04);
+
+  /* Preparamos a borda de baixo para o efeito neon (inicialmente transparente) */
+  border-bottom: 4px solid transparent;
+
+  /* Sombra leve inicial */
+  box-shadow: 0 10px 30px rgba(31, 45, 115, 0.05);
+
+  /* A transição mais suave possível (curva cubic-bezier) */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 3. O Ícone (Estado Normal) */
+.tech-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+
+  /* Fundo: Azul Escuro bem clarinho (10% de opacidade) */
+  background-color: var(--color-secundary);
+
+  /* Ícone: Azul Escuro Sólido */
+  color: var(--color-secundary);
+
+  transition: all 0.4s ease;
+}
+
+/* 4. Textos do Card */
+.tech-title {
+  color: var(--color-secundary);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.tech-desc {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Movimento do Card */
+.tech-card:hover {
+  transform: translateY(-10px); /* Sobe levemente */
+
+  /* A sombra fica azulada e mais forte */
+  box-shadow: 0 20px 40px rgba(31, 45, 115, 0.15);
+
+  /* A borda inferior acende com o VERDE NEON */
+  border-bottom-color: var(--color-primary);
+}
+
+/* Transformação do Ícone */
+.tech-card:hover .tech-icon {
+  /* Fundo vira VERDE NEON */
+  background-color: var(--color-primary);
+
+  /* Ícone continua Azul Escuro (para contraste máximo) */
+  color: var(--color-secundary);
+
+  /* Efeito de brilho ao redor do ícone e leve rotação */
+  box-shadow: 0 0 25px rgba(199, 255, 0, 0.5);
+  transform: scale(1.1) rotate(5deg);
+}

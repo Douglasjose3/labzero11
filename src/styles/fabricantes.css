@@ -1,0 +1,79 @@
+/* FABRICANTES */
+/* Definição das Variáveis (caso ainda não tenha no :root) */
+/* Fundo da Seção */
+.brands-section {
+  background-color: var(--color-secundary);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden; /* Para efeitos de brilho não vazarem */
+}
+
+/* O Cartão da Marca */
+.brand-card {
+  background: rgba(255, 255, 255, 0.05); /* Fundo quase transparente */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+  border-radius: 12px;
+  height: 120px; /* Altura fixa */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+}
+
+/* Texto Destaque no Título */
+.text-highlight {
+  color: var(--color-primary);
+}
+
+/* Estilo do Ícone (Apple, Android) */
+.brand-icon {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Estilo do Nome (Texto) */
+.brand-name {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* --- EFEITO HOVER (A Mágica) --- */
+.brand-card:hover {
+  /* Sobe um pouquinho */
+  transform: translateY(-5px);
+
+  /* Borda fica Neon */
+  border-color: var(--color-primary);
+
+  /* Brilho Neon em volta do card */
+  box-shadow: 0 0 20px rgba(199, 255, 0, 0.4);
+
+  /* Fundo clareia levemente */
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.brand-card:hover .brand-icon,
+.brand-card:hover .brand-name {
+  color: var(--color-primary); /* Texto e ícone ficam Neon */
+}
+
+/* Ajustes de Fontes Específicas (Simulando logos) */
+.font-moto {
+  font-family: sans-serif;
+  letter-spacing: -1px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.font-xiaomi {
+  font-weight: 700;
+}
