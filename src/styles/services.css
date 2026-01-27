@@ -44,14 +44,15 @@
   height: 80px;
   margin-bottom: 1.5rem;
   border-radius: 50%;
-
-  font-size: 32px; /* em vez de rem */
-  line-height: 1; /* evita esticar */
-
   background-color: var(--color-secundary);
-  color: var(--color-secundary);
-
   transition: all 0.4s ease;
+}
+
+.tech-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
 }
 
 /* 4. Textos do Card */
