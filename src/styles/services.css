@@ -44,12 +44,11 @@
   height: 80px;
   margin-bottom: 1.5rem;
   border-radius: 50%;
-  font-size: 2rem;
 
-  /* Fundo: Azul Escuro bem clarinho (10% de opacidade) */
+  font-size: 32px; /* em vez de rem */
+  line-height: 1; /* evita esticar */
+
   background-color: var(--color-secundary);
-
-  /* Ícone: Azul Escuro Sólido */
   color: var(--color-secundary);
 
   transition: all 0.4s ease;

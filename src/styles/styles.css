@@ -8,6 +8,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 * {
   margin: o;
   padding: 0;
